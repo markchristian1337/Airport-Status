@@ -8,17 +8,15 @@ public class Airport {
   private String temperature;
   private String delay;
 
-  public Airport(String airportName) {
-    name = airportName;
+
+
+  public  Airport(){
+
+
   }
 
-  public Airport(String airportName, String cityName, String stateName, String airportCode, String temperatureAirport, String Delay) {
-    this.name = airportName;
-    this.city = cityName;
-    this.state = stateName;
-    this.code = airportCode;
-    this.temperature = temperatureAirport;
-    this.delay = Delay;
+  public Airport(String airportName ) {
+    name = airportName;
   }
 
   public String getName() {
@@ -44,4 +42,23 @@ public class Airport {
   public String getDelay() {
     return delay;
   }
+
+
+  public Airport(String airportName, String cityName, String stateName, String airportCode, String temperatureAirport, String Delay)
+   {
+     this.name = airportName;
+     this.city = cityName;
+     this.state = stateName;
+     this.code = airportCode;
+     this.temperature = temperatureAirport;
+     this.delay = Delay;
+
+   }
+
+
+
+
+
+
+
 }

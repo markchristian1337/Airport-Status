@@ -30,7 +30,24 @@ val test by tasks.getting(Test::class) {
 	useJUnitPlatform {}
 }
 
-tasks {
+task("runnoerror", JavaExec::class) {
+  main = "main.airportstatus.'AIRPORTUI.JAVA'"
+  classpath = sourceSets["main"].runtimeClasspath
+  args(listOf("airportcodes.txt"))
+}
+
+task("runwitherror", JavaExec::class) {
+  main = "main.airportstatus.'AIRPORTUI.JAVA'"
+  classpath = sourceSets["main"].runtimeClasspath
+  args(listOf("airportcodeswerr.txt "))
+}
+
+task("run") {
+  dependsOn("runnoerror", "runwitherror")
+}
+
+
+  tasks {
   val treatWarningsAsError =
     listOf("-Xlint:unchecked", "-Xlint:deprecation", "-Werror")
 
