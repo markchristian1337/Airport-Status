@@ -44,3 +44,36 @@ Automated testing
 Code coverage
 Build files (I created them for you in assign1, but it's your turn now)
 Change build.bat in your repository to point to assign2 instead of assign1
+
+Total [100]: 41
+
+Program runs and produces desired output [20]: -20
+> ./gradlew run
+
+> Task :runnoerror FAILED
+Error: Could not find or load main class main.airportstatus.'AIRPORTUI.JAVA'
+Caused by: java.lang.ClassNotFoundException: main.airportstatus.'AIRPORTUI.JAVA'
+
+No Java code with main found.
+
+Program fails gracefully on network error[5]: -5
+
+All tests pass [10]:
+
+Test quality [20]: -10
+Significant part of the tests for talking to the service is missing. This involves extensive use of mocking and learning the techniques to avoid network calls to enable unit testing.
+
+All tests except one do not rely on network [5]: -5
+These tests are largely missing.
+
+Code coverage [10]: -3
+
+Design quality [20]: -15
+
+Unnecessary constructor in Airport
+
+Significant part of the design still missing, that is, code to talk to the service and parse the data.
+
+Code quality [10]: -1
+
+Place constructors before any getters.
